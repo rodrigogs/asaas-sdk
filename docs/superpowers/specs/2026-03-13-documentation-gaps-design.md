@@ -12,7 +12,7 @@ The asaas-sdk open-source documentation covers infrastructure well (setup, error
 - Cover cross-cutting concerns: rate limits, sandbox limitations, security best practices
 - Enhance existing docs (error-handling, webhooks) with missing details
 - Maintain bilingual parity (English + Portuguese)
-- Keep each file under 400 lines for maintainability
+- Target 400 lines per file, hard max 500 lines for complex domains (payments)
 
 ## Approach
 
@@ -77,8 +77,13 @@ What works / doesn't in sandbox.
 (Repeat per service in the group)
 
 ## Related
-Links to other docs and official Asaas docs.
+Links to other docs (always include [Pagination](../pagination.md)) and official Asaas docs.
 ```
+
+Template rules:
+- Sub-service sections must show the full accessor chain in the first example (e.g., `client.pix.keys.create(...)`, not just `keys.create(...)`)
+- Methods returning `BinaryResponse` (e.g., `downloadPaymentBook`) must include a file-save example
+- Write EN first, then translate to PT. Code examples are identical in both languages (only prose and comments change)
 
 ## Service Groupings
 
@@ -129,7 +134,7 @@ Key concepts:
 - Update credit card without charging
 - Charge generation rules
 - Invoice settings for automatic NF-e issuance
-- Subscription payment listing and booklet generation
+- Subscription payment listing and booklet generation (downloadPaymentBook returns BinaryResponse — include file-save example)
 - Split handling on recurring charges
 - Status lifecycle
 
@@ -162,7 +167,7 @@ Key concepts:
 - Document submission for approval
 - Registration status checking
 - Commercial info (business data) management
-- MyAccount: commercial info + webhook management
+- MyAccount: registration status, document management, commercial info, white-label deletion (note: webhook CRUD does not exist on myAccount/subaccounts yet — remove incorrect examples from existing webhooks.md)
 - Notification events and default behavior
 
 ### services/commerce.md
@@ -171,7 +176,7 @@ Services: paymentLinks, checkouts, checkoutConfig, invoices, fiscalInfo
 Content from: `10-links-de-pagamento-e-checkout.md`, `07-notas-fiscais.md`
 
 Key concepts:
-- Payment links: CRUD with restore, image management (upload, set main)
+- Payment links: CRUD with restore, image sub-service (paymentLinks.images: add, list, get, remove, setMain)
 - Checkout: creation, cancellation, customer data handling
 - Checkout config: personalization (colors, logo, etc.)
 - Fiscal info: upsert, municipal services lookup, tax situation codes
@@ -270,6 +275,15 @@ Both README.md and README.pt.md get expanded Documentation sections:
 | security.md | 01-fundacoes, 08-transferencias.md |
 | error-handling.md (edit) | 01-fundacoes |
 | webhooks.md (edit) | 06-webhooks.md |
+| (excluded) 00-visao-geral.md | Internal planning doc — not applicable to SDK user docs |
+| (excluded) 99-fontes-e-referencias.md | Internal audit trail — official URLs used as cross-references in Related sections |
+
+## Enhancements to Existing Files — Mitigation for Size
+
+The enhanced files (error-handling.md at 370 lines, webhooks.md at 320 lines) will exceed the 400-line target. Mitigations:
+
+- **error-handling.md**: Move the existing "Retry Pattern" section (full `withRetry` helper, ~70 lines) into the new `rate-limits.md` guide. Replace with a brief cross-reference. This frees ~70 lines for the new rate limit error content.
+- **webhooks.md**: Keep the event catalog as a summary table (event name + description, one line each) rather than expanded sections. Link to official Asaas event docs for full payloads. This keeps the addition under ~80 lines.
 
 ## Implementation Notes
 
@@ -279,3 +293,4 @@ Both README.md and README.pt.md get expanded Documentation sections:
 - Each service section includes sandbox limitations inline (not just in sandbox.md)
 - Pagination patterns in examples use the correct `await` + `for await` pattern
 - Error getter examples use property access (not method calls): `error.isAuth` not `error.isAuth()`
+- Document `client.request<T>(config)` and `client.requestBinary(config)` escape hatches in getting-started.md (brief section for unsupported endpoints)
