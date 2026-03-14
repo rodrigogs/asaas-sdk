@@ -27,6 +27,8 @@ A TypeScript SDK for the Asaas payment platform API, the leading Brazilian finte
 
 ## Installation
 
+Package on npm: [`@rodrigogs/asaas-sdk`](https://www.npmjs.com/package/@rodrigogs/asaas-sdk)
+
 ```bash
 npm install @rodrigogs/asaas-sdk
 ```

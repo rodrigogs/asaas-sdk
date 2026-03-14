@@ -28,6 +28,8 @@ SDK TypeScript para a API da plataforma de pagamentos Asaas.
 
 ## Instalação
 
+Pacote no npm: [`@rodrigogs/asaas-sdk`](https://www.npmjs.com/package/@rodrigogs/asaas-sdk)
+
 ```bash
 npm install @rodrigogs/asaas-sdk
 ```
