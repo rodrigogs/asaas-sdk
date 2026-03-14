@@ -349,7 +349,7 @@ Contribuições são bem-vindas! Por favor, abra uma issue ou pull request no re
 
 ## Licença
 
-MIT
+[Apache License 2.0](./LICENSE)
 
 ---
 

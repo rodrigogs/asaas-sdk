@@ -14,6 +14,7 @@
     "type": "git",
     "url": "https://github.com/OWNER/asaas-sdk.git"
   },
+  "license": "Apache-2.0",
   "files": ["dist"],
   "engines": {
     "node": ">=20"

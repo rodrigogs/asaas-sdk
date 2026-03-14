@@ -208,4 +208,4 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## License
 
-MIT
+[Apache License 2.0](./LICENSE)
