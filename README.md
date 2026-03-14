@@ -4,6 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/%40rodrigogs%2Fasaas-sdk)](https://www.npmjs.com/package/@rodrigogs/asaas-sdk)
 [![npm downloads](https://img.shields.io/npm/dm/%40rodrigogs%2Fasaas-sdk)](https://www.npmjs.com/package/@rodrigogs/asaas-sdk)
 [![License](https://img.shields.io/github/license/rodrigogs/asaas-sdk)](./LICENSE)
+[![Coverage](https://img.shields.io/badge/coverage-100%25-2ea44f)](./vitest.config.ts)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-339933)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6)](https://www.typescriptlang.org/)
 [![ESM only](https://img.shields.io/badge/module-ESM-1f6feb)](https://nodejs.org/api/esm.html)
