@@ -1,5 +1,14 @@
 # asaas-sdk
 
+[![CI](https://github.com/rodrigogs/asaas-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/rodrigogs/asaas-sdk/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/asaas-sdk)](https://www.npmjs.com/package/asaas-sdk)
+[![npm downloads](https://img.shields.io/npm/dm/asaas-sdk)](https://www.npmjs.com/package/asaas-sdk)
+[![License](https://img.shields.io/github/license/rodrigogs/asaas-sdk)](./LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D20-339933)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6)](https://www.typescriptlang.org/)
+[![ESM only](https://img.shields.io/badge/module-ESM-1f6feb)](https://nodejs.org/api/esm.html)
+[![Zero runtime deps](https://img.shields.io/badge/dependencies-zero_runtime-2ea44f)](./package.json)
+
 SDK TypeScript para a API da plataforma de pagamentos Asaas.
 
 [English version](./README.md)
@@ -14,7 +23,7 @@ SDK TypeScript para a API da plataforma de pagamentos Asaas.
 - Ambientes SANDBOX e PRODUCTION
 - Timeout configurável (padrão: 30 segundos)
 - Lazy-loading de serviços para melhor performance
-- Suporte nativo a Node.js >= 18 (fetch, AbortSignal, FormData)
+- Suporte nativo a Node.js >= 20 (fetch, AbortSignal, FormData)
 
 ## Instalação
 

@@ -1,5 +1,14 @@
 # asaas-sdk
 
+[![CI](https://github.com/rodrigogs/asaas-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/rodrigogs/asaas-sdk/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/asaas-sdk)](https://www.npmjs.com/package/asaas-sdk)
+[![npm downloads](https://img.shields.io/npm/dm/asaas-sdk)](https://www.npmjs.com/package/asaas-sdk)
+[![License](https://img.shields.io/github/license/rodrigogs/asaas-sdk)](./LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D20-339933)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6)](https://www.typescriptlang.org/)
+[![ESM only](https://img.shields.io/badge/module-ESM-1f6feb)](https://nodejs.org/api/esm.html)
+[![Zero runtime deps](https://img.shields.io/badge/dependencies-zero_runtime-2ea44f)](./package.json)
+
 A TypeScript SDK for the Asaas payment platform API, the leading Brazilian fintech solution for payment processing, subscriptions, and financial services.
 
 [Versão em Português](./README.pt.md)
@@ -21,7 +30,7 @@ A TypeScript SDK for the Asaas payment platform API, the leading Brazilian finte
 npm install asaas-sdk
 ```
 
-**Requirements:** Node.js >= 18
+**Requirements:** Node.js >= 20
 
 ## Quick Start
 
