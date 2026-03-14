@@ -173,25 +173,8 @@ console.log('Data:', page1.data)
 
 ## Webhook Verification
 
-Verify webhook authenticity using the webhook auth header:
-
-```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
-
-// Express example
-app.post('/webhooks/asaas', (req, res) => {
-  const webhookToken = req.headers[ASAAS_WEBHOOK_AUTH_HEADER]
-
-  if (webhookToken !== process.env.ASAAS_WEBHOOK_TOKEN) {
-    return res.status(401).json({ error: 'Unauthorized' })
-  }
-
-  const event = req.body
-  console.log('Webhook event:', event.event, event.payment?.id)
-
-  res.status(200).json({ received: true })
-})
-```
+For webhook authentication, framework examples, and configuration details, see the
+[Webhook guide](./docs/en/webhooks.md).
 
 ## Documentation
 

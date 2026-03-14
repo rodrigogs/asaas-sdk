@@ -212,27 +212,8 @@ console.log('Total:', result.totalCount)
 
 ## Verificação de Webhooks
 
-A Asaas envia um header customizado para autenticar webhooks:
-
-```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
-
-// Express.js exemplo
-app.post('/webhook/asaas', (req, res) => {
-  const receivedToken = req.headers[ASAAS_WEBHOOK_AUTH_HEADER]
-  const expectedToken = process.env.ASAAS_ACCESS_TOKEN
-
-  if (receivedToken !== expectedToken) {
-    return res.status(401).json({ error: 'Unauthorized' })
-  }
-
-  // Processar webhook
-  const event = req.body
-  console.log('Evento recebido:', event.event)
-
-  res.json({ received: true })
-})
-```
+Para autenticação de webhooks, exemplos por framework e detalhes de configuração,
+veja o [guia de Webhooks](./docs/pt/webhooks.md).
 
 ## Exemplos Adicionais
 
