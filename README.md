@@ -173,7 +173,7 @@ console.log('Data:', page1.data)
 
 ## Webhook Verification
 
-Verify webhook authenticity using the access token header:
+Verify webhook authenticity using the webhook auth header:
 
 ```typescript
 import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
@@ -182,7 +182,7 @@ import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 app.post('/webhooks/asaas', (req, res) => {
   const webhookToken = req.headers[ASAAS_WEBHOOK_AUTH_HEADER]
 
-  if (webhookToken !== process.env.ASAAS_ACCESS_TOKEN) {
+  if (webhookToken !== process.env.ASAAS_WEBHOOK_TOKEN) {
     return res.status(401).json({ error: 'Unauthorized' })
   }
 
