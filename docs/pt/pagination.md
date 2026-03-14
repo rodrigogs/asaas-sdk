@@ -1,6 +1,6 @@
 # Paginação
 
-A API do Asaas utiliza paginação baseada em offset para endpoints que retornam listas de recursos. Este guia explica como trabalhar com respostas paginadas no `asaas-sdk`.
+A API do Asaas utiliza paginação baseada em offset para endpoints que retornam listas de recursos. Este guia explica como trabalhar com respostas paginadas no `@rodrigogs/asaas-sdk`.
 
 ## Como a Paginação Funciona
 

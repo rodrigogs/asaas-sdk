@@ -96,7 +96,7 @@ Subscriptions use soft deletion. Use `remove()` to mark as deleted. Unlike custo
 #### Create a Monthly Subscription
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,

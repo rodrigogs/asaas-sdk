@@ -73,7 +73,7 @@ Cada pagamento feito através de um link cria um novo cliente no Asaas. Isso pod
 #### Criar um Link de Pagamento para Pagamentos Únicos
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,

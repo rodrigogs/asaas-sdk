@@ -19,7 +19,7 @@ The Sandbox environment operates independently from production with its own infr
 To configure the SDK for Sandbox, specify the `'SANDBOX'` environment during client initialization:
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_SANDBOX_TOKEN!,
@@ -338,7 +338,7 @@ Sandbox follows the same rate limiting rules as production:
 Use Sandbox to test your application's rate limiting and retry logic:
 
 ```typescript
-import { AsaasApiError } from 'asaas-sdk'
+import { AsaasApiError } from '@rodrigogs/asaas-sdk'
 
 try {
   const payment = await sandboxClient.payments.create(paymentData)

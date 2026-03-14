@@ -95,7 +95,7 @@ Pagamentos usam exclusão suave. Use `remove()` para marcar como excluído e `re
 #### Criar um Pagamento de Boleto
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,

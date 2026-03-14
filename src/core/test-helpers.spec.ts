@@ -37,7 +37,7 @@ describe('createTestOptions', () => {
 
     expect(options.accessToken).toBe('test_key_123')
     expect(options.baseUrl).toContain('sandbox')
-    expect(options.userAgent).toBe('asaas-sdk-test')
+    expect(options.userAgent).toBe('@rodrigogs/asaas-sdk-test')
     expect(typeof options.fetch).toBe('function')
   })
 })

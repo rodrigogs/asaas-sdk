@@ -96,7 +96,7 @@ Assinaturas usam exclusão suave. Use `remove()` para marcar como deletado. Dife
 #### Criar uma Assinatura Mensal
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,

@@ -38,7 +38,7 @@ If your application makes 60 simultaneous `GET` requests to fetch customer data,
 Control concurrency in your application using connection pools or semaphores:
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,
@@ -167,7 +167,7 @@ RateLimit-Reset: 2847
 The SDK currently exposes raw response data. You can access headers through the underlying HTTP response:
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,
@@ -228,7 +228,7 @@ async function makeThrottledRequest<T>(
 The SDK provides an `AsaasApiError` class that includes a convenience property for detecting rate limit errors:
 
 ```typescript
-import { AsaasClient, AsaasApiError } from 'asaas-sdk'
+import { AsaasClient, AsaasApiError } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,
@@ -470,7 +470,7 @@ function sleep(ms: number): Promise<void> {
 **Basic Usage:**
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 import { withRetry } from './utils/retry'
 
 const client = new AsaasClient({
@@ -786,7 +786,7 @@ Track rate limit incidents to identify patterns and optimize your integration.
 **Example Logging:**
 
 ```typescript
-import { AsaasApiError } from 'asaas-sdk'
+import { AsaasApiError } from '@rodrigogs/asaas-sdk'
 
 async function monitoredRequest<T>(
   name: string,
@@ -838,7 +838,7 @@ Include rate limit scenarios in your integration tests.
 
 ```typescript
 import { describe, it, expect, vi } from 'vitest'
-import { AsaasClient, AsaasApiError } from 'asaas-sdk'
+import { AsaasClient, AsaasApiError } from '@rodrigogs/asaas-sdk'
 import { withRetry } from './retry'
 
 describe('Rate Limit Handling', () => {

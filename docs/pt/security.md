@@ -176,7 +176,7 @@ O payload do webhook espelha a resposta de criação da transferência:
 O Asaas autentica requisições de webhook usando um cabeçalho customizado:
 
 ```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from 'asaas-sdk'
+import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 
 // ASAAS_WEBHOOK_AUTH_HEADER = 'asaas-access-token'
 
@@ -230,7 +230,7 @@ Certifique-se de que seu endpoint de webhook tem alta disponibilidade e responde
 ### Exemplo de Implementação
 
 ```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from 'asaas-sdk'
+import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 import express from 'express'
 
 const app = express()
@@ -369,7 +369,7 @@ Para ambientes de produção lidando com operações sensíveis:
 Implemente monitoramento para eventos relacionados à segurança:
 
 ```typescript
-import { AsaasClient, AsaasApiError } from 'asaas-sdk'
+import { AsaasClient, AsaasApiError } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,

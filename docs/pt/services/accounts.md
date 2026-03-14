@@ -30,7 +30,7 @@ Clientes são a base das operações financeiras no Asaas. Antes de criar pagame
 #### Criando um Cliente
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: 'your-access-token',

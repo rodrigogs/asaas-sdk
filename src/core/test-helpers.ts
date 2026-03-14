@@ -38,7 +38,7 @@ export function createTestOptions(
     baseUrl: ASAAS_BASE_URLS.SANDBOX,
     timeout: ASAAS_DEFAULT_TIMEOUT,
     fetch: mockFetch,
-    userAgent: 'asaas-sdk-test',
+    userAgent: '@rodrigogs/asaas-sdk-test',
     ...overrides,
   }
 }

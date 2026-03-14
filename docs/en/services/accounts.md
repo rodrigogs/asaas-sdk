@@ -30,7 +30,7 @@ Customers are the foundation of financial operations in Asaas. Before creating p
 #### Creating a Customer
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: 'your-access-token',

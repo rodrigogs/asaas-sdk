@@ -1,4 +1,4 @@
-# Copilot instructions for `asaas-sdk`
+# Copilot instructions for `@rodrigogs/asaas-sdk`
 
 ## Build, test, and lint
 

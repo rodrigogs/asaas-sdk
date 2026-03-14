@@ -13,7 +13,7 @@ Asaas authenticates webhook requests using a token sent in a custom header.
 The SDK exports the header name as a constant:
 
 ```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from 'asaas-sdk'
+import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 // Value: 'asaas-access-token'
 ```
 
@@ -22,7 +22,7 @@ When you create a webhook in Asaas (via dashboard or API), you configure an auth
 ### Express
 
 ```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from 'asaas-sdk'
+import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 
 app.post('/webhooks/asaas', (req, res) => {
   const token = req.headers[ASAAS_WEBHOOK_AUTH_HEADER]
@@ -41,7 +41,7 @@ app.post('/webhooks/asaas', (req, res) => {
 ### Next.js Route Handler
 
 ```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from 'asaas-sdk'
+import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 
 export async function POST(request: Request) {
   const token = request.headers.get(ASAAS_WEBHOOK_AUTH_HEADER)
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
 ### Fastify
 
 ```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from 'asaas-sdk'
+import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 
 fastify.post('/webhooks/asaas', async (request, reply) => {
   const token = request.headers[ASAAS_WEBHOOK_AUTH_HEADER]

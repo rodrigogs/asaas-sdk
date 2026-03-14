@@ -38,7 +38,7 @@ Se sua aplicação faz 60 requisições `GET` simultâneas para buscar dados de 
 Controle a concorrência em sua aplicação usando pools de conexão ou semáforos:
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,
@@ -167,7 +167,7 @@ RateLimit-Reset: 2847
 O SDK atualmente expõe dados brutos de resposta. Você pode acessar cabeçalhos através da resposta HTTP subjacente:
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,
@@ -228,7 +228,7 @@ async function makeThrottledRequest<T>(
 O SDK fornece uma classe `AsaasApiError` que inclui uma propriedade de conveniência para detectar erros de limite de taxa:
 
 ```typescript
-import { AsaasClient, AsaasApiError } from 'asaas-sdk'
+import { AsaasClient, AsaasApiError } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,
@@ -470,7 +470,7 @@ function sleep(ms: number): Promise<void> {
 **Uso Básico:**
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 import { withRetry } from './utils/retry'
 
 const client = new AsaasClient({
@@ -786,7 +786,7 @@ Rastreie incidentes de limite de taxa para identificar padrões e otimizar sua i
 **Exemplo de Logging:**
 
 ```typescript
-import { AsaasApiError } from 'asaas-sdk'
+import { AsaasApiError } from '@rodrigogs/asaas-sdk'
 
 async function monitoredRequest<T>(
   name: string,
@@ -838,7 +838,7 @@ Inclua cenários de limite de taxa em seus testes de integração.
 
 ```typescript
 import { describe, it, expect, vi } from 'vitest'
-import { AsaasClient, AsaasApiError } from 'asaas-sdk'
+import { AsaasClient, AsaasApiError } from '@rodrigogs/asaas-sdk'
 import { withRetry } from './retry'
 
 describe('Rate Limit Handling', () => {

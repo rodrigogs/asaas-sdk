@@ -49,7 +49,7 @@ As transferências permitem mover dinheiro da sua conta Asaas para outros destin
 #### Transferir para Conta Bancária
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -255,7 +255,7 @@ Os pagamentos de boletos permitem pagar contas usando o campo de identificação
 #### Simular Pagamento de Boleto
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -402,7 +402,7 @@ A garantia (escrow) permite reter fundos de pagamentos em uma conta garantida an
 #### Configurar Garantia Padrão
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -548,7 +548,7 @@ As divisões (splits) permitem distribuir automaticamente valores de pagamento e
 #### Listar Divisões Pagas
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -733,7 +733,7 @@ As antecipações permitem receber fundos de pagamentos antes da data de vencime
 #### Verificar Limites de Antecipação
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -922,7 +922,7 @@ Configure ajustes de antecipação automática para antecipar automaticamente re
 #### Verificar Status de Antecipação Automática
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,

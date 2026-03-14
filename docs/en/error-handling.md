@@ -1,6 +1,6 @@
 # Error Handling
 
-The asaas-sdk provides a structured error hierarchy to help you handle different failure scenarios when interacting with the Asaas API.
+The `@rodrigogs/asaas-sdk` package provides a structured error hierarchy to help you handle different failure scenarios when interacting with the Asaas API.
 
 ## Error Hierarchy
 
@@ -14,7 +14,7 @@ AsaasError (base)
 All errors extend the native `Error` class and are exported from the main package:
 
 ```typescript
-import { AsaasApiError, AsaasTimeoutError, AsaasConnectionError } from 'asaas-sdk'
+import { AsaasApiError, AsaasTimeoutError, AsaasConnectionError } from '@rodrigogs/asaas-sdk'
 ```
 
 ## AsaasApiError
@@ -41,7 +41,7 @@ The most common error type. Thrown when the Asaas API returns an HTTP error resp
 #### Basic Try/Catch
 
 ```typescript
-import { AsaasClient, AsaasApiError } from 'asaas-sdk'
+import { AsaasClient, AsaasApiError } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({ accessToken: process.env.ASAAS_ACCESS_TOKEN! })
 
@@ -149,7 +149,7 @@ Thrown when a request exceeds the configured timeout. The default timeout is 30 
 ### Example
 
 ```typescript
-import { AsaasClient, AsaasTimeoutError } from 'asaas-sdk'
+import { AsaasClient, AsaasTimeoutError } from '@rodrigogs/asaas-sdk'
 
 // Configure a longer timeout for credit card operations
 const client = new AsaasClient({
@@ -192,7 +192,7 @@ Thrown when the request fails due to network issues such as DNS resolution failu
 ### Example
 
 ```typescript
-import { AsaasClient, AsaasConnectionError } from 'asaas-sdk'
+import { AsaasClient, AsaasConnectionError } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({ accessToken: process.env.ASAAS_ACCESS_TOKEN! })
 
@@ -282,7 +282,7 @@ The SDK does not include built-in retry logic. For a complete `withRetry` helper
 ### Example: Comprehensive Error Handler
 
 ```typescript
-import { AsaasApiError, AsaasTimeoutError, AsaasConnectionError } from 'asaas-sdk'
+import { AsaasApiError, AsaasTimeoutError, AsaasConnectionError } from '@rodrigogs/asaas-sdk'
 
 async function handleAsaasOperation<T>(
   operation: () => Promise<T>

@@ -19,7 +19,7 @@ O ambiente Sandbox opera de forma independente da produção, com sua própria i
 Para configurar o SDK para Sandbox, especifique o ambiente `'SANDBOX'` durante a inicialização do cliente:
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_SANDBOX_TOKEN!,
@@ -338,7 +338,7 @@ O Sandbox segue as mesmas regras de limitação de taxa que a produção:
 Use o Sandbox para testar a lógica de limitação de taxa e tentativas de sua aplicação:
 
 ```typescript
-import { AsaasApiError } from 'asaas-sdk'
+import { AsaasApiError } from '@rodrigogs/asaas-sdk'
 
 try {
   const payment = await sandboxClient.payments.create(paymentData)

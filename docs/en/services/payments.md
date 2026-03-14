@@ -95,7 +95,7 @@ Payments use soft deletion. Use `remove()` to mark as deleted and `restore()` to
 #### Create a Boleto Payment
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,

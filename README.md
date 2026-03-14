@@ -1,8 +1,8 @@
-# asaas-sdk
+# @rodrigogs/asaas-sdk
 
 [![CI](https://github.com/rodrigogs/asaas-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/rodrigogs/asaas-sdk/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/asaas-sdk)](https://www.npmjs.com/package/asaas-sdk)
-[![npm downloads](https://img.shields.io/npm/dm/asaas-sdk)](https://www.npmjs.com/package/asaas-sdk)
+[![npm version](https://img.shields.io/npm/v/%40rodrigogs%2Fasaas-sdk)](https://www.npmjs.com/package/@rodrigogs/asaas-sdk)
+[![npm downloads](https://img.shields.io/npm/dm/%40rodrigogs%2Fasaas-sdk)](https://www.npmjs.com/package/@rodrigogs/asaas-sdk)
 [![License](https://img.shields.io/github/license/rodrigogs/asaas-sdk)](./LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-339933)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6)](https://www.typescriptlang.org/)
@@ -27,7 +27,7 @@ A TypeScript SDK for the Asaas payment platform API, the leading Brazilian finte
 ## Installation
 
 ```bash
-npm install asaas-sdk
+npm install @rodrigogs/asaas-sdk
 ```
 
 **Requirements:** Node.js >= 20
@@ -35,7 +35,7 @@ npm install asaas-sdk
 ## Quick Start
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 // Create client (defaults to PRODUCTION)
 const asaas = new AsaasClient({
@@ -114,7 +114,7 @@ const asaas = new AsaasClient({
 All errors extend `AsaasError` with specific error types for different scenarios:
 
 ```typescript
-import { AsaasApiError, AsaasTimeoutError, AsaasConnectionError } from 'asaas-sdk'
+import { AsaasApiError, AsaasTimeoutError, AsaasConnectionError } from '@rodrigogs/asaas-sdk'
 
 try {
   const payment = await asaas.payments.create({
@@ -173,7 +173,7 @@ console.log('Data:', page1.data)
 Verify webhook authenticity using the access token header:
 
 ```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from 'asaas-sdk'
+import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 
 // Express example
 app.post('/webhooks/asaas', (req, res) => {

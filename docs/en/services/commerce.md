@@ -73,7 +73,7 @@ Each payment made through a link creates a new customer in Asaas. This may cause
 #### Create a Payment Link for Single Payments
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN!,

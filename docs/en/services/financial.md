@@ -49,7 +49,7 @@ Transfers allow you to move money from your Asaas account to other destinations:
 #### Transfer to Bank Account
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -255,7 +255,7 @@ Bill payments allow you to pay bills using the barcode identification field (lin
 #### Simulate Bill Payment
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -402,7 +402,7 @@ Escrow allows you to hold payment funds in a guaranteed account before releasing
 #### Configure Default Escrow
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -548,7 +548,7 @@ Splits allow you to automatically distribute payment values across multiple wall
 #### List Paid Splits
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -733,7 +733,7 @@ Anticipations allow you to receive payment funds before the due date by requesti
 #### Check Anticipation Limits
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,
@@ -922,7 +922,7 @@ Configure automatic anticipation settings to automatically anticipate credit car
 #### Check Automatic Anticipation Status
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const client = new AsaasClient({
   accessToken: process.env.ASAAS_ACCESS_TOKEN,

@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide will help you get up and running with the asaas-sdk, a TypeScript SDK for the Asaas payment platform API.
+This guide will help you get up and running with the `@rodrigogs/asaas-sdk` package, a TypeScript SDK for the Asaas payment platform API.
 
 ## Prerequisites
 
@@ -15,19 +15,19 @@ Before you begin, ensure you have:
 Install the SDK via npm:
 
 ```bash
-npm install asaas-sdk
+npm install @rodrigogs/asaas-sdk
 ```
 
 Or using yarn:
 
 ```bash
-yarn add asaas-sdk
+yarn add @rodrigogs/asaas-sdk
 ```
 
 Or using pnpm:
 
 ```bash
-pnpm add asaas-sdk
+pnpm add @rodrigogs/asaas-sdk
 ```
 
 ## Creating a Client
@@ -35,7 +35,7 @@ pnpm add asaas-sdk
 Import and instantiate the `AsaasClient` with your API key:
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const asaas = new AsaasClient({
   accessToken: process.env.ASAAS_API_KEY!,
@@ -115,7 +115,7 @@ console.log('Bankslip URL:', payment.bankSlipUrl)
 ### Complete Example
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 async function main() {
   const asaas = new AsaasClient({
@@ -198,7 +198,7 @@ You can provide a custom `fetch` implementation for testing, logging, or using a
 
 ```typescript
 import { fetch } from 'undici'
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const asaas = new AsaasClient({
   accessToken: process.env.ASAAS_API_KEY!,
@@ -210,7 +210,7 @@ const asaas = new AsaasClient({
 ### Example with Mock for Testing
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const mockFetch = jest.fn(async (url, options) => {
   return new Response(JSON.stringify({ id: 'mock-id' }), {

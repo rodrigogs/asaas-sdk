@@ -1,6 +1,6 @@
 # Primeiros Passos
 
-Este guia apresenta os conceitos básicos para começar a usar o `asaas-sdk`, um SDK TypeScript completo para a API da plataforma de pagamentos Asaas.
+Este guia apresenta os conceitos básicos para começar a usar o `@rodrigogs/asaas-sdk`, um SDK TypeScript completo para a API da plataforma de pagamentos Asaas.
 
 ## Pré-requisitos
 
@@ -15,17 +15,17 @@ Antes de começar, certifique-se de ter:
 Instale o pacote via npm:
 
 ```bash
-npm install asaas-sdk
+npm install @rodrigogs/asaas-sdk
 ```
 
 Ou usando outros gerenciadores de pacotes:
 
 ```bash
 # Yarn
-yarn add asaas-sdk
+yarn add @rodrigogs/asaas-sdk
 
 # pnpm
-pnpm add asaas-sdk
+pnpm add @rodrigogs/asaas-sdk
 ```
 
 ## Criando o Cliente
@@ -33,7 +33,7 @@ pnpm add asaas-sdk
 A primeira etapa é instanciar o `AsaasClient` com sua chave de API:
 
 ```ts
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const asaas = new AsaasClient({
   accessToken: process.env.ASAAS_API_KEY!,
@@ -72,7 +72,7 @@ const asaas = new AsaasClient({
 Vamos criar um cliente e emitir uma cobrança para ele:
 
 ```ts
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 const asaas = new AsaasClient({
   accessToken: process.env.ASAAS_API_KEY!,
@@ -154,7 +154,7 @@ const asaasProd = new AsaasClient({
 Você pode fornecer uma implementação customizada de `fetch` para casos especiais como testes, mocks ou uso de bibliotecas alternativas:
 
 ```ts
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 import { fetch as undiciFetch } from 'undici'
 
 // Exemplo: usando undici

@@ -53,7 +53,7 @@ Manage Pix keys registered to your Asaas account.
 **Creating a Pix Key**
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk';
+import { AsaasClient } from '@rodrigogs/asaas-sdk';
 
 const client = new AsaasClient({
   accessToken: 'your_access_token',

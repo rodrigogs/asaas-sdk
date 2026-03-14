@@ -1,8 +1,8 @@
-# asaas-sdk
+# @rodrigogs/asaas-sdk
 
 [![CI](https://github.com/rodrigogs/asaas-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/rodrigogs/asaas-sdk/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/asaas-sdk)](https://www.npmjs.com/package/asaas-sdk)
-[![npm downloads](https://img.shields.io/npm/dm/asaas-sdk)](https://www.npmjs.com/package/asaas-sdk)
+[![npm version](https://img.shields.io/npm/v/%40rodrigogs%2Fasaas-sdk)](https://www.npmjs.com/package/@rodrigogs/asaas-sdk)
+[![npm downloads](https://img.shields.io/npm/dm/%40rodrigogs%2Fasaas-sdk)](https://www.npmjs.com/package/@rodrigogs/asaas-sdk)
 [![License](https://img.shields.io/github/license/rodrigogs/asaas-sdk)](./LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-339933)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6)](https://www.typescriptlang.org/)
@@ -28,21 +28,21 @@ SDK TypeScript para a API da plataforma de pagamentos Asaas.
 ## Instalação
 
 ```bash
-npm install asaas-sdk
+npm install @rodrigogs/asaas-sdk
 ```
 
 ```bash
-yarn add asaas-sdk
+yarn add @rodrigogs/asaas-sdk
 ```
 
 ```bash
-pnpm add asaas-sdk
+pnpm add @rodrigogs/asaas-sdk
 ```
 
 ## Início Rápido
 
 ```typescript
-import { AsaasClient } from 'asaas-sdk'
+import { AsaasClient } from '@rodrigogs/asaas-sdk'
 
 // Criar cliente (ambiente SANDBOX para testes)
 const client = new AsaasClient({
@@ -142,7 +142,7 @@ const client = new AsaasClient({
 ## Tratamento de Erros
 
 ```typescript
-import { AsaasApiError, AsaasTimeoutError, AsaasConnectionError } from 'asaas-sdk'
+import { AsaasApiError, AsaasTimeoutError, AsaasConnectionError } from '@rodrigogs/asaas-sdk'
 
 try {
   const payment = await client.payments.create({
@@ -212,7 +212,7 @@ console.log('Total:', result.totalCount)
 A Asaas envia um header customizado para autenticar webhooks:
 
 ```typescript
-import { ASAAS_WEBHOOK_AUTH_HEADER } from 'asaas-sdk'
+import { ASAAS_WEBHOOK_AUTH_HEADER } from '@rodrigogs/asaas-sdk'
 
 // Express.js exemplo
 app.post('/webhook/asaas', (req, res) => {
