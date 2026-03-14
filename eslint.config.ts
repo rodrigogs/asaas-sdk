@@ -5,19 +5,11 @@ import eslintPluginPrettier from 'eslint-plugin-prettier'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import tseslint from 'typescript-eslint'
 
-/** @type {import("eslint").Linter.Config} */
-export default [
-  {
-    files: ['*.js', '*.cjs', '*.mjs', '*.ts', '*.tsx', '*.jsx'],
-  },
+export default tseslint.config(
+  { ignores: ['dist', 'coverage', 'eslint.config.ts'] },
   js.configs.recommended,
-  eslintConfigPrettier,
   ...tseslint.configs.recommended,
-  ...tseslint.config({
-    rules: {
-      '@typescript-eslint/consistent-type-imports': 'error',
-    },
-  }),
+  eslintConfigPrettier,
   {
     plugins: {
       'import': importPlugin,
@@ -25,34 +17,8 @@ export default [
       'prettier': eslintPluginPrettier,
     },
     rules: {
+      '@typescript-eslint/consistent-type-imports': 'error',
       'prettier/prettier': 'error',
-    },
-  },
-  {
-    ignores: [
-      '**/node_modules/**',
-      '**/dist/**',
-      '**/build/**',
-      '**/.next/**',
-      '**/.turbo/**',
-      '**/.vscode/**',
-      '**/.history/**',
-      '**/eslint.config.{js,cjs,mjs,ts}',
-    ],
-  },
-  {
-    files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.mjs',
-      '**/*.cjs',
-    ],
-    rules: {
-      'quotes': ['error', 'single', { avoidEscape: true }],
-      'comma-dangle': ['error', 'always-multiline'],
-      'semi': ['error', 'never'],
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
       'import/first': 'error',
@@ -62,15 +28,15 @@ export default [
     },
   },
   {
-    files: ['**/*.test.ts', '**/*.test.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
+    files: ['**/*.test.ts', '**/*.spec.ts'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
     },
   },
   {
-    files: ['**/vitest.config.mjs'],
+    files: ['vitest.config.ts'],
     rules: {
       'import/no-default-export': 'off',
     },
   },
-]
+)
