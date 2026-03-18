@@ -12,6 +12,8 @@
 
 A TypeScript SDK for the Asaas payment platform API, the leading Brazilian fintech solution for payment processing, subscriptions, and financial services.
 
+> **Note:** This is an independent open-source project and is **not an official Asaas implementation**. It is not affiliated with, endorsed by, or supported by Asaas or its related companies. For the official API documentation, see [docs.asaas.com](https://docs.asaas.com/).
+
 [Versão em Português](./README.pt.md)
 
 ## Features

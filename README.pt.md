@@ -12,6 +12,8 @@
 
 SDK TypeScript para a API da plataforma de pagamentos Asaas.
 
+> **Nota:** Este e um projeto open-source independente e **nao e uma implementacao oficial** da Asaas. Nao possui afiliacao, endosso ou suporte da Asaas ou de suas empresas relacionadas. Para a documentacao oficial da API, consulte [docs.asaas.com](https://docs.asaas.com/).
+
 [English version](./README.md)
 
 ## Funcionalidades
